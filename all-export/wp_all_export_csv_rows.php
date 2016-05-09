@@ -41,4 +41,4 @@ function my_export_csv_rows($articles, $options, $export_id)
 
     return $articles;
 }
-add_filter('wp_all_export_csv_rows', 'my_wp_all_export_csv_rows', 10, 2);
+add_filter('wp_all_export_csv_rows', 'my_export_csv_rows', 10, 2);
