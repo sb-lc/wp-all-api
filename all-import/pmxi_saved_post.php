@@ -9,7 +9,8 @@
  *   SimpleXMLElement representing current record in file
  *
  */
-function my_saved_post($post_id, $xml) {
+function my_saved_post($post_id, $xml)
+{
 
     /*
      * Here you can use standard WordPress functions like get_post_meta() and get_post()
@@ -32,7 +33,6 @@ function my_saved_post($post_id, $xml) {
 add_action('pmxi_saved_post', 'my_saved_post', 10, 2);
 
 
-
 //------------------------------------------------------------------------------
 //                          Example uses below
 //------------------------------------------------------------------------------
@@ -43,11 +43,12 @@ add_action('pmxi_saved_post', 'my_saved_post', 10, 2);
  *
  * @param $id
  */
-function custom_field_append($id) {
-	$value = get_post_meta($id, 'your_meta_key', true);
-	$temp = get_post_meta($id, '_temp', true);
-	update_post_meta($id, 'your_meta_key', $value.$temp);
-	delete_post_meta($id, '_temp');
+function custom_field_append($id)
+{
+    $value = get_post_meta($id, 'your_meta_key', true);
+    $temp = get_post_meta($id, '_temp', true);
+    update_post_meta($id, 'your_meta_key', $value . $temp);
+    delete_post_meta($id, '_temp');
 }
 
 add_action('pmxi_saved_post', 'custom_field_append', 10, 1);
@@ -58,11 +59,12 @@ add_action('pmxi_saved_post', 'custom_field_append', 10, 1);
  *
  * @param $id
  */
-function conditional_update($id) {
-	$check = get_post_meta($id, '_my_update_check', true);
+function conditional_update($id)
+{
+    $check = get_post_meta($id, '_my_update_check', true);
 
-    if ($check === 'yes'){
-	    $new_value = get_post_meta($id, '_my_new_value', true);
+    if ($check === 'yes') {
+        $new_value = get_post_meta($id, '_my_new_value', true);
         update_post_meta($id, '_my_new_value', $new_value);
     }
 }

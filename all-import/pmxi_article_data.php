@@ -8,13 +8,14 @@
  * @param $articleData
  *   $articleData['post_content'] is new content
  * @param $import
- *   ??
+ *   Import object
  * @param $post_to_update
  *   $post_to_update->post_content is current content
  *
  * @return mixed
  */
-function my_pmxi_article_data( $articleData, $import, $post_to_update ) {
+function my_pmxi_article_data($articleData, $import, $post_to_update)
+{
 
     // add new content to the top of old content
     // $articleData['post_content'] .= $post_to_update->post_content;;
@@ -22,7 +23,7 @@ function my_pmxi_article_data( $articleData, $import, $post_to_update ) {
     return $articleData;
 }
 
-add_filter( 'pmxi_article_data', 'my_pmxi_article_data', 10, 3 );
+add_filter('pmxi_article_data', 'my_pmxi_article_data', 10, 3);
 
 
 //------------------------------------------------------------------------------

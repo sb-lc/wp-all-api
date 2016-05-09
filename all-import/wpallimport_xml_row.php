@@ -9,7 +9,8 @@
  *   simpleXML object. See http://php.net/manual/en/book.simplexml.php
  * @return simpleXML object
  */
-function wpai_xml_row( $node ) {
+function wpai_xml_row($node)
+{
     // Modify simpleXML object as needed
     return $node;
 }
@@ -22,15 +23,15 @@ add_filter('wpallimport_xml_row', 'wpai_xml_row', 10, 1);
 // -----------------------------------------------------------------------------
 
 
-
 /**
  * Example of adding a child element called "title"
  *
  */
-function add_title_node( $node ) {
+function add_title_node($node)
+{
     $result = $node->xpath('//mydata[1]/*[1]');
 
-    if ( !empty($result[0])) {
+    if (!empty($result[0])) {
         $name = $result[0]->getName();
         $node->addChild('title', $name);
     }

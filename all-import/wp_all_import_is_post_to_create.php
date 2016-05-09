@@ -10,12 +10,13 @@
  * @return bool
  *   true = create, false = skip
  */
-function my_is_post_to_create( $xml_node ) {
-  // your code here
-  return true;
+function my_is_post_to_create($xml_node)
+{
+    // your code here
+    return true;
 }
 
-add_filter( 'wp_all_import_is_post_to_create', 'my_is_post_to_create', 10, 2 );
+add_filter('wp_all_import_is_post_to_create', 'my_is_post_to_create', 10, 2);
 
 
 //------------------------------------------------------------------------------

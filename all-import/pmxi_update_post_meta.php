@@ -12,11 +12,12 @@
  * @param $value
  *   The custom field value
  */
-function my_update_post_meta( $post_id, $key, $value ) {
+function my_update_post_meta($post_id, $key, $value)
+{
 
 }
 
-add_action( 'pmxi_update_post_meta', 'my_update_post_meta', 10, 3 );
+add_action('pmxi_update_post_meta', 'my_update_post_meta', 10, 3);
 
 
 //------------------------------------------------------------------------------

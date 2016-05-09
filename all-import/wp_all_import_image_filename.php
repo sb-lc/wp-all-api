@@ -21,15 +21,15 @@
  *
  * @return string
  */
-function wpai_image_filename( $filename, $img_title, $img_caption, $img_alt, $article ) {
+function wpai_image_filename($filename, $img_title, $img_caption, $img_alt, $article)
+{
 
     // Your code
 
-	return $filename;
+    return $filename;
 }
 
-add_filter( 'wp_all_import_image_filename', 'wpai_image_filename', 10, 5 );
-
+add_filter('wp_all_import_image_filename', 'wpai_image_filename', 10, 5);
 
 
 //------------------------------------------------------------------------------
@@ -43,12 +43,13 @@ add_filter( 'wp_all_import_image_filename', 'wpai_image_filename', 10, 5 );
  * Won't work for ACF images since you cant import alt text (etc) with them.
  *
  */
-function image_name_from_alt( $filename, $img_title, $img_caption, $img_alt, $article ) {
-	if ( ! empty( $img_alt ) ) {
-		$filename = sanitize_file_name( $img_alt ) . '.jpg';
-	}
+function image_name_from_alt($filename, $img_title, $img_caption, $img_alt, $article)
+{
+    if (!empty($img_alt)) {
+        $filename = sanitize_file_name($img_alt) . '.jpg';
+    }
 
-	return $filename;
+    return $filename;
 }
 
-add_filter( 'wp_all_import_image_filename', 'image_name_from_alt', 10, 5 );
+add_filter('wp_all_import_image_filename', 'image_name_from_alt', 10, 5);

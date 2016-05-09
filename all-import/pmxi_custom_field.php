@@ -16,11 +16,12 @@
  *
  * @return mixed
  */
-function my_custom_field( $value, $post_id, $key, $existing_meta_keys, $import_id ) {
+function my_custom_field($value, $post_id, $key, $existing_meta_keys, $import_id)
+{
 
-	// Modify the custom field value as needed and return it
+    // Modify the custom field value as needed and return it
 
-	return $value;
+    return $value;
 }
 
 add_filter('pmxi_custom_field', 'my_custom_field', 10, 5);
@@ -36,13 +37,14 @@ add_filter('pmxi_custom_field', 'my_custom_field', 10, 5);
  *
  *
  */
-function keep_existing_if_empty( $value, $post_id, $key, $existing_meta, $import_id ) {
-    if ( $key == 'ENTER-YOUR-CUSTOM-FIELD-NAME-HERE' ) {
-        if ( empty( $value ) ) {
+function keep_existing_if_empty($value, $post_id, $key, $existing_meta, $import_id)
+{
+    if ($key == 'ENTER-YOUR-CUSTOM-FIELD-NAME-HERE') {
+        if (empty($value)) {
             $value = isset($existing_meta[$key][0]) ? $existing_meta[$key][0] : $value;
         }
     }
     return $value;
 }
 
-add_filter( 'pmxi_custom_field', 'keep_existing_if_empty', 10, 5 );
+add_filter('pmxi_custom_field', 'keep_existing_if_empty', 10, 5);
