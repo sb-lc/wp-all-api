@@ -8,8 +8,8 @@
  *
  * For hooks to execute after a post is saved see:
  *
- * @see pmxi_after_post_import.php
- * @link ./pmxi_saved_post.php
+ * pmxi_after_post_import
+ * pmxi_saved_post
  *
  * @param $import_id
  */

@@ -25,6 +25,10 @@ function pmxe_wp_all_export_csv_rows($articles, $options, $export_id)
 add_filter('wp_all_export_csv_rows', 'pmxe_wp_all_export_csv_rows', 10, 2);
 
 
+//------------------------------------------------------------------------------
+//                          Example uses below
+// -----------------------------------------------------------------------------
+
 /**
  * Import based on some criteria. In this case pricing.
  *
