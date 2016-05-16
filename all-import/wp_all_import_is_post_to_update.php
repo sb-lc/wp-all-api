@@ -1,6 +1,6 @@
 <?php
 /**
- * Filter: wp_all_import_is_post_to_create
+ * Filter: wp_all_import_is_post_to_update
  * ---------------------------------------
  *
  * Return a boolean indicating if the existing record should be updated. For
@@ -19,7 +19,7 @@ function my_is_post_to_update($id, $xml_node)
     
 }
 
-add_filter('wp_all_import_is_post_to_create', 'my_is_post_to_update', 10, 2);
+add_filter('wp_all_import_is_post_to_update', 'my_is_post_to_update', 10, 2);
 
 
 //------------------------------------------------------------------------------
