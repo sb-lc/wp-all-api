@@ -3,11 +3,11 @@ WPAllImport/ExportAPIinfo
 
 ## Before import
 ####pmxi_before_xml_import
-Executed before the import starts.
+Executed just before the import begins.
 [Details](all-import/pmxi_before_xml_import.php)
 
 ####wpallimport_xml_row
-Allows modification of each data record before import.
+Allows modification of each data record from the file before import.
 [Details](all-import/wpallimport_xml_row.php)
 
 ## After import
@@ -23,13 +23,13 @@ Invoked after saving a post (??)
 Executed when the entire import completes.
 [Details](all-import/pmxi_after_xml_import.php)
 
-## Custom fields
+## Custom fields (post meta)
 ####pmxi_custom_field
-Custom field values can be modified before save using this hook.
+Custom field values can be modified *before* save using this hook.
 [Details](all-import/pmxi_custom_field.php)
  
 ####pmxi_update_post_meta
-Called right after a custom field (post meta) is saved. Use if you need access to meta_id.
+Called right *after* a custom field is saved. Use this if you need access to meta_id.
 [Details](all-import/pmxi_update_post_meta.php)
 
 ## Choosing which records to process
@@ -55,7 +55,7 @@ Invoked right after an attachment was uploaded.
 [Details](all-import/pmxi_attachment_uploaded.php)
 
 ####pmxi_gallery_image
-Invoked after an image was imported.
+Invoked right after an image was imported. Usefull if working with 3rd party plugins/themes that have a custom gallery format.
 [Details](all-import/pmxi_gallery_image.php)
 
 ####wp_all_import_image_filename
@@ -64,7 +64,7 @@ Allows customizing the names of imported images.
 
 ## Other
 ####pmxi_article_data
-Allow modifying the post body content before save.
+Allows modifying the post body content before save.
 [Details](all-import/pmxi_article_data.php)
 
 
