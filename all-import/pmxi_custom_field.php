@@ -1,7 +1,8 @@
 <?php
 /**
+ * ==================================
  * Filter: pmxi_custom_field
- * ------------------------------
+ * ==================================
  *
  * Custom field values can be filtered before save using this hook.
  *
@@ -15,7 +16,6 @@
  */
 function my_custom_field($value, $post_id, $key, $existing_meta_keys, $import_id)
 {
-    
     // Unless you want this code to execute for every import, be sure to check the import id
     //
     // if ($import_id === 5) { ...
@@ -26,9 +26,9 @@ function my_custom_field($value, $post_id, $key, $existing_meta_keys, $import_id
 add_filter('pmxi_custom_field', 'my_custom_field', 10, 5);
 
 
-//------------------------------------------------------------------------------
-//                          Example uses below
-// -----------------------------------------------------------------------------
+// ----------------------------
+// Example uses below
+// ----------------------------
 
 
 /**

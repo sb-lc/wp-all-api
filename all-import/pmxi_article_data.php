@@ -1,7 +1,8 @@
 <?php
 /**
+ * ==================================
  * Filter: pmxi_article_data
- * ------------------------------
+ * ==================================
  *
  * Append content to existing post body.
  *
@@ -15,7 +16,6 @@
  */
 function my_pmxi_article_data($articleData, $import, $post_to_update)
 {
-
     // Add new content to the top of old content
     // $articleData['post_content'] .= $post_to_update->post_content;;
 
@@ -25,6 +25,6 @@ function my_pmxi_article_data($articleData, $import, $post_to_update)
 add_filter('pmxi_article_data', 'my_pmxi_article_data', 10, 3);
 
 
-//------------------------------------------------------------------------------
-//                          Example uses below
-// -----------------------------------------------------------------------------
+// ----------------------------
+// Example uses below
+// ----------------------------

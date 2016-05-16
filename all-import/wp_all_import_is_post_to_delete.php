@@ -1,7 +1,8 @@
 <?php
 /**
+ * =======================================
  * Filter: wp_all_import_is_post_to_delete
- * ---------------------------------------
+ * =======================================
  *
  * Return a boolean indicating if the existing record should be deleted.
  *
@@ -13,18 +14,16 @@
  */
 function my_is_post_to_delete($is_post_to_delete, $pid, $import)
 {
-
     // your code here
     return true;
-
 }
 
 add_filter('wp_all_import_is_post_to_delete', 'my_is_post_to_delete', 10, 2);
 
 
-//------------------------------------------------------------------------------
-//                          Example uses below
-// -----------------------------------------------------------------------------
+// ----------------------------
+// Example uses below
+// ----------------------------
 
 
 /**

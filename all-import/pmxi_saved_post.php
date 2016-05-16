@@ -1,7 +1,8 @@
 <?php
 /**
+ * ==================================
  * Action: pmxi_saved_post
- * ------------------------------
+ * ==================================
  *
  * Called after a post is created/updated by WP All Import.
  *
@@ -11,7 +12,6 @@
  */
 function my_saved_post($post_id, $xml)
 {
-
     /*
      * Here you can use standard WordPress functions like get_post_meta() and get_post()
      * to retrieve the data, make your changes and then use update_post(),
@@ -27,15 +27,14 @@ function my_saved_post($post_id, $xml)
      *     delete_post_meta($post_id,"_temp");
      *
      */
-
 }
 
 add_action('pmxi_saved_post', 'my_saved_post', 10, 2);
 
 
-//------------------------------------------------------------------------------
-//                          Example uses below
-//------------------------------------------------------------------------------
+// ----------------------------
+// Example uses below
+// ----------------------------
 
 /**
  * Append data to a custom field. Requires importing the data to be appended into

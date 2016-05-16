@@ -1,9 +1,10 @@
 <?php
 /**
+ * ==================================
  * Filter: wp_all_export_csv_rows
- * ------------------------------
+ * ==================================
  *
- * Filters CSV rows to import.
+ * Filters CSV rows to export.
  *
  * See 'wp_all_export_xml_rows' for XML data. (which get passed a single
  * record instead of an array of records)
@@ -30,9 +31,9 @@ function wp_all_export_csv_rows($articles, $options, $export_id)
 add_filter('wp_all_export_csv_rows', 'wp_all_export_csv_rows', 10, 2);
 
 
-//------------------------------------------------------------------------------
-//                          Example uses below
-// -----------------------------------------------------------------------------
+// ----------------------------
+// Example uses below
+// ----------------------------
 
 /**
  * Import based on some criteria. In this case pricing.

@@ -1,8 +1,9 @@
 <?php
 /**
+ * ==================================
  * Action: pmxi_attachment_uploaded
- * --------------------------------
- *
+ * ==================================
+ * 
  * This hook is called after WP All Import creates/updates post attachment file(s).
  * See also pmxi_gallery_image
  *
@@ -20,8 +21,10 @@ add_action('pmxi_attachment_uploaded', 'my_attachment_uploaded', 10, 3);
 
 
 
-//------------------------------------------------------------------------------
-//                          Example uses below
-// -----------------------------------------------------------------------------
+// ----------------------------
+// Example uses below
+// ----------------------------
+
+// To do.
 
 

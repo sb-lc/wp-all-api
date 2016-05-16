@@ -1,7 +1,8 @@
 <?php
 /**
+ * =====================================
  * Filter: wp_all_import_image_filename
- * ------------------------------------
+ * =====================================
  *
  * Can be used to set a custom filename for an imported image.
  *
@@ -20,18 +21,16 @@
  */
 function wpai_image_filename($filename, $img_title, $img_caption, $img_alt, $article)
 {
-
     // Your code
-
     return $filename;
 }
 
 add_filter('wp_all_import_image_filename', 'wpai_image_filename', 10, 5);
 
 
-//------------------------------------------------------------------------------
-//                          Example uses below
-// -----------------------------------------------------------------------------
+// ----------------------------
+// Example uses below
+// ----------------------------
 
 /**
  * Allows you to base the image name off the alt text. Useful when the image name
@@ -45,7 +44,6 @@ function image_name_from_alt($filename, $img_title, $img_caption, $img_alt, $art
     if (!empty($img_alt)) {
         $filename = sanitize_file_name($img_alt) . '.jpg';
     }
-
     return $filename;
 }
 

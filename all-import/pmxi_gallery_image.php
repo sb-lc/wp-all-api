@@ -1,7 +1,8 @@
 <?php
 /**
+ * ==================================
  * Action: pmxi_gallery_image
- * ------------------------------
+ * ==================================
  * This is called for images imported via the default image field and ACF image fields.
  *
  * This is usually used when a plugin/theme uses a special custom field to store
@@ -20,9 +21,9 @@ function my_gallery_image($post_id, $att_id, $file)
 add_action('pmxi_gallery_image', 'my_gallery_image', 10, 3);
 
 
-//------------------------------------------------------------------------------
-//                          Example uses below
-// -----------------------------------------------------------------------------
+// ----------------------------
+// Example uses below
+// ----------------------------
 
 
 /**
@@ -37,7 +38,6 @@ add_action('pmxi_gallery_image', 'my_gallery_image', 10, 3);
  */
 function gallery_id_url($post_id, $att_id, $filepath, $is_keep_existing_images)
 {
-
     $key = '_gallery';  // Edit this: Set meta key for gallery array here
     $size = 'full';     // Edit this: Set WordPress image size for the URL here (e.g. "full" or "thumb")
 
@@ -67,7 +67,6 @@ add_action('pmxi_gallery_image', 'gallery_id_url', 10, 4);
  */
 function gallery_n_id($post_id, $att_id, $filepath, $is_keep_existing_images)
 {
-
     $key = '_gallery';  // Edit this: Set meta key for gallery array here
 
     $gallery = get_post_meta($post_id, $key, TRUE);
@@ -90,7 +89,6 @@ add_action('pmxi_gallery_image', 'gallery_n_id', 10, 4);
  */
 function gallery_meta_id($post_id, $att_id, $filepath, $is_keep_existing_images)
 {
-
     $key = '_gallery'; // Edit this: Set meta key for gallery array here
 
     $result = get_post_meta($post_id, $key, FALSE);
@@ -113,7 +111,6 @@ add_action('pmxi_gallery_image', 'gallery_meta_id', 10, 4);
  */
 function gallery_ids_in_string($post_id, $att_id, $filepath, $is_keep_existing_images)
 {
-
     $key = '_gallery'; // Edit this: Set meta key for gallery array here
     $separator = ",";
 

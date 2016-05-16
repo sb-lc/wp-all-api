@@ -1,7 +1,8 @@
 <?php
 /**
+ * ==================================
  * Filter: wpallimport_xml_row
- * ------------------------------
+ * ==================================
  *
  * Allows reading or modification of the data record before importing
  *
@@ -14,18 +15,16 @@
  */
 function wpai_xml_row($node)
 {
-
     // Modify simpleXML object as needed
     return $node;
-    
 }
 
 add_filter('wpallimport_xml_row', 'wpai_xml_row', 10, 1);
 
 
-//------------------------------------------------------------------------------
-//                          Example uses below
-// -----------------------------------------------------------------------------
+// ----------------------------
+// Example uses below
+// ----------------------------
 
 
 /**

@@ -1,7 +1,8 @@
 <?php
 /**
+ * ==================================
  * Filter: wp_all_export_xml_rows
- * ------------------------------
+ * ==================================
  * Filter a single XML record for conditional export.
  *
  * See 'wp_all_export_csv_rows' for CSV data (which get passed an array of
@@ -23,12 +24,11 @@ function my_wp_all_export_xml_rows($is_export_record, $record, $export_options, 
     // Check $record object and return true to export or false to skip
 
     return true;
-
 }
 
 add_filter('wp_all_export_xml_rows', 'my_wp_all_export_xml_rows', 10, 4);
 
 
-//------------------------------------------------------------------------------
-//                          Example uses below
-// -----------------------------------------------------------------------------
+// ----------------------------
+// Example uses below
+// ----------------------------
