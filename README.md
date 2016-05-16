@@ -1,7 +1,11 @@
-#wp-all-api
-WPAllImport/ExportAPIinfo
+#WP All Import & WP All Export API 
+Info and examples.
 
-## Before import
+---
+##WP-All-Import
+---
+
+### Before import
 ####pmxi_before_xml_import
 Executed just before the import begins.
 [Details](all-import/pmxi_before_xml_import.php)
@@ -10,7 +14,7 @@ Executed just before the import begins.
 Allows modification of each data record from the file before import.
 [Details](all-import/wpallimport_xml_row.php)
 
-## After import
+### After import
 ####pmxi_saved_post
 Invoked right after saving a post.
 [Details](all-import/pmxi_saved_post.php)
@@ -23,7 +27,7 @@ Invoked after saving a post (??)
 Executed when the entire import completes.
 [Details](all-import/pmxi_after_xml_import.php)
 
-## Custom fields (post meta)
+### Custom fields (post meta)
 ####pmxi_custom_field
 Custom field values can be modified *before* save using this hook.
 [Details](all-import/pmxi_custom_field.php)
@@ -32,7 +36,7 @@ Custom field values can be modified *before* save using this hook.
 Called right *after* a custom field is saved. Use this if you need access to meta_id.
 [Details](all-import/pmxi_update_post_meta.php)
 
-## Choosing which records to process
+### Choosing which records to import
 ####wp_all_import_is_post_to_create
 Indicate whether the post is to be created.
 [Details](all-import/wp_all_import_is_post_to_create.php)
@@ -49,7 +53,7 @@ Indicate whether the post is to be deleted.
 Allows specifing a list/range of records to import.
 [Details](all-import/wp_all_import_specified_records.php)
 
-## Images and attachments
+### Images and attachments
 ####pmxi_attachment_uploaded
 Invoked right after an attachment was uploaded.
 [Details](all-import/pmxi_attachment_uploaded.php)
@@ -62,9 +66,24 @@ Invoked right after an image was imported. Usefull if working with 3rd party plu
 Allows customizing the names of imported images.
 [Details](all-import/wp_all_import_image_filename.php)
 
-## Other
+### Other
 ####pmxi_article_data
 Allows modifying the post body content before save.
 [Details](all-import/pmxi_article_data.php)
 
+---
+##WP-All-Export
+---
 
+### Misc
+####wp_all_export_csv_rows
+Filter CSV rows to export.
+[Details](all-export/wp_all_export_csv_rows.php)
+
+####wp_all_export_xml_rows
+Filter XML rows to export.
+[Details](all-export/wp_all_export_xml_rows.php)
+
+####wp_all_export_additional_data
+Create additional fields for export.
+[Details](all-export/wp_all_export_additional_data.php)
