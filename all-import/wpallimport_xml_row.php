@@ -1,12 +1,15 @@
 <?php
 /**
+ * Filter: wpallimport_xml_row
+ * ------------------------------
+ *
  * Allows reading or modification of the data record before importing
  *
  * Note that this isn't just for XML imports. Data records from other formats (CSV, JSON,
  * Excel) are converted to SimpleXML objects internally for processing.
  *
- * @param $node
- *   simpleXML object. See http://php.net/manual/en/book.simplexml.php
+ * @param $node simpleXML object. See http://php.net/manual/en/book.simplexml.php
+ *
  * @return simpleXML object
  */
 function wpai_xml_row($node)

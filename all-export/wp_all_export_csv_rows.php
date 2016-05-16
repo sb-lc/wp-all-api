@@ -1,20 +1,25 @@
 <?php
-
-
 /**
- * Filter CSV rows to import.
+ * Filter: wp_all_export_csv_rows
+ * ------------------------------
+ *
+ * Filters CSV rows to import.
  *
  * See 'wp_all_export_xml_rows' for XML data. Note that:
- * 'wp_all_export_xml_rows' deals only with a single record at a time and returns a bool
- * 'wp_all_export_csv_rows' gets passed multiple records for processing and returns an array
+ *   'wp_all_export_xml_rows' deals only with a single record at a time and returns a bool
+ *   'wp_all_export_csv_rows' gets passed multiple records for processing and returns an array
  *
  * @param $articles
  * @param $options
  * @param $export_id
+ *
  * @return array - the records to import
  */
-function pmxe_wp_all_export_csv_rows($articles, $options, $export_id)
+function wp_all_export_csv_rows($articles, $options, $export_id)
 {
+    // Unless you want this code to execute for every export, be sure to check the export id
+    //
+    // if ($export_id === 5) { ...
 
     // $articles contains on array of records for importing.
     // Loop through the array and unset() any entries you don't
@@ -22,7 +27,8 @@ function pmxe_wp_all_export_csv_rows($articles, $options, $export_id)
 
     return $articles; // Return the array of records to import
 }
-add_filter('wp_all_export_csv_rows', 'pmxe_wp_all_export_csv_rows', 10, 2);
+
+add_filter('wp_all_export_csv_rows', 'wp_all_export_csv_rows', 10, 2);
 
 
 //------------------------------------------------------------------------------
@@ -45,4 +51,5 @@ function my_export_csv_rows($articles, $options, $export_id)
 
     return $articles;
 }
+
 add_filter('wp_all_export_csv_rows', 'my_export_csv_rows', 10, 2);

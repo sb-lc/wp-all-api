@@ -1,15 +1,15 @@
 <?php
-
 /**
+ * Filter: wp_all_import_is_post_to_create
+ * ---------------------------------------
+ *
  * Return a boolean indicating if the existing record should be updated. For
  * new posts see "wp_all_import_is_post_to_create"
  *
  * @param $id
+ * @param $xml_node An array of all the values for the current record
  *
- * @param $xml_node
- *   An array of all the values for the current record
- * @return bool
- *   true = update, false = skip
+ * @return bool (true = update, false = skip)
  */
 function my_is_post_to_update($id, $xml_node)
 {

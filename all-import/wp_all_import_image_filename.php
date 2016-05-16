@@ -1,6 +1,8 @@
 <?php
-
 /**
+ * Filter: wp_all_import_image_filename
+ * ------------------------------------
+ *
  * Can be used to set a custom filename for an imported image.
  *
  * Will be called for regular image imports and ACF images (see notes
@@ -8,16 +10,11 @@
  *
  * @since 4.3
  *
- * @param $filename
- *   The filename as created by the import
- * @param $img_title
- *   From "SEO and advanced options". Will always be blank for ACF fields.
- * @param $img_caption
- *   From "SEO and advanced options". Will always be blank for ACF fields.
- * @param $img_alt
- *   From "SEO and advanced options". Will always be blank for ACF fields.
- * @param $article
- *   ???
+ * @param $filename    The filename as created by the import
+ * @param $img_title   From "SEO and advanced options". Will always be blank for ACF fields.
+ * @param $img_caption From "SEO and advanced options". Will always be blank for ACF fields.
+ * @param $img_alt     From "SEO and advanced options". Will always be blank for ACF fields.
+ * @param $article     ???
  *
  * @return string
  */

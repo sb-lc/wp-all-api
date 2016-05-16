@@ -1,12 +1,12 @@
 <?php
-
 /**
+ * Action: pmxi_saved_post
+ * ------------------------------
+ *
  * Called after a post is created/updated by WP All Import.
  *
- * @param $post_id
- *   The id of the post just created/updated
- * @param $xml
- *   SimpleXMLElement representing current record in file
+ * @param $post_id The id of the post just created/updated
+ * @param $xml     SimpleXMLElement representing current record in file
  *
  */
 function my_saved_post($post_id, $xml)
