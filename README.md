@@ -3,7 +3,6 @@ Info and examples.
 
 ---
 ##WP-All-Import
----
 
 ### Before import
 ####pmxi_before_xml_import
@@ -73,7 +72,6 @@ Allows modifying the post body content before save.
 
 ---
 ##WP-All-Export
----
 
 ### Misc
 ####wp_all_export_csv_rows
