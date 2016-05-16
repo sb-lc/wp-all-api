@@ -5,9 +5,8 @@
  *
  * Filters CSV rows to import.
  *
- * See 'wp_all_export_xml_rows' for XML data. Note that:
- *   'wp_all_export_xml_rows' deals only with a single record at a time and returns a bool
- *   'wp_all_export_csv_rows' gets passed multiple records for processing and returns an array
+ * See 'wp_all_export_xml_rows' for XML data. (which get passed a single
+ * record instead of an array of records)
  *
  * @param $articles
  * @param $options

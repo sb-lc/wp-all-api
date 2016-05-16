@@ -13,8 +13,10 @@
  */
 function my_is_post_to_update($id, $xml_node)
 {
+    
     // your code here
     return true;
+    
 }
 
 add_filter('wp_all_import_is_post_to_create', 'my_is_post_to_update', 10, 2);

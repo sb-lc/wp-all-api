@@ -14,8 +14,10 @@
  */
 function wpai_xml_row($node)
 {
+
     // Modify simpleXML object as needed
     return $node;
+    
 }
 
 add_filter('wpallimport_xml_row', 'wpai_xml_row', 10, 1);
